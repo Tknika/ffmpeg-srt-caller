@@ -1,0 +1,9 @@
+services:
+  ffmpeg-srt-caller:
+    image: ghcr.io/tknika/ffmpeg-srt-caller:latest
+    container_name: ffmpeg-srt-caller
+    volumes:
+      - ./:/data
+    environment:
+      - VIDEO_PATH=${VIDEO_PATH}
+      - SRT_URL=${SRT_URL}
